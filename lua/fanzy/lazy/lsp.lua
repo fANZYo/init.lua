@@ -19,6 +19,7 @@ return {
 				"tsserver",
 				"eslint",
 				"lua_ls",
+        "csharp_ls",
 			},
 			handlers = {
 				function(server_name)
