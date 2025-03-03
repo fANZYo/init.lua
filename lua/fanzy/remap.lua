@@ -42,7 +42,7 @@ vim.keymap.set('n', '<leader>pWs', ":lua require('telescope.builtin').grep_strin
 vim.keymap.set('n', '<leader>ps', ":lua require('telescope.builtin').grep_string({ search = vim.fn.input('Grep > ') })<CR>")
 
 -- Trouble
-vim.keymap.set("n", "<leader>tt", ":TroubleToggle<CR>")
+vim.keymap.set("n", "<leader>tt", ":Trouble diagnostics toggle<CR>")
 vim.keymap.set('n', '[t', ":lua require('trouble').next({ skip_groups = true, jump = true })<CR>")
 vim.keymap.set('n', ']t', ":lua require('trouble').previous({ skip_groups = true, jump = true })<CR>")
 

@@ -16,7 +16,11 @@ return {
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
       group = lint_augroup,
       callback = function()
-        require("lint").try_lint()
+        local status, lint = pcall(require, "eslint")
+
+        if status then
+          lint.try_lint()
+        end
       end,
     })
   end,
